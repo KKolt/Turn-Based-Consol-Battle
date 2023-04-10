@@ -1,7 +1,7 @@
 using DefaultNamespace;
 using UnityEngine;
 
-public class PitFightScript : MonoBehaviour
+public class PitFighterScript : MonoBehaviour
 {
     private Fighter _fighter1;
     private Fighter _fighter2;
