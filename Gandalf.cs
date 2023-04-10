@@ -23,31 +23,31 @@ namespace DefaultNamespace
 
         protected override void ActionSlot2()
         {
-            Disarm();
+            Defend();
         }
 
         protected override void ActionSlot3()
         {
-            Defend();
+            Disarm();
         }
 
         protected override void AiChooseAction()
         {
             if (Opponent.IsCharged)
             {
-                ActionSlot3();
+                ActionSlot2();
                 NextTurn();
                 return;
             }
 
-            Action2Weight = Opponent.WeaponDmg > 0 ? 35 : 0;
+            Action3Weight = Opponent.WeaponDmg > 0 ? 35 : 0;
 
             base.AiChooseAction();
         }
 
         protected override void InitiativePrint()
         {
-            Debug.Log("1) Poke with staff 2) Your Staff is broken 3) You Shall not pass");
+            Debug.Log("1) Poke with staff 2) You Shall not pass 3) Your Staff is broken");
         }
         
     }
