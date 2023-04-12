@@ -158,13 +158,14 @@ public class Fighter
 
             return;
         }
-
+        
         Opponent.GetInitiative();
     }
 
     private void GetInitiative()
     {
         Initiative = true;
+        _preventDmg = false;
         
         if (IsPlayer)
         {
