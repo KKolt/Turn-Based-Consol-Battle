@@ -54,12 +54,7 @@ namespace DefaultNamespace
         {
             Charge();
         }
-        
-        protected override void ActionSlot3()
-        {
-            throw new NotImplementedException();
-        }
-        
+
         protected override void InitiativePrint()
         {
             if (!IsCharged)

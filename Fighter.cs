@@ -140,14 +140,17 @@ public class Fighter
     
     protected virtual void ActionSlot1()
     {
+        throw new NotImplementedException();
     }
 
     protected virtual void ActionSlot2()
     {
+        throw new NotImplementedException();
     }
 
     protected virtual void ActionSlot3()
     {
+        throw new NotImplementedException();
     }
 
     protected void NextTurn()
