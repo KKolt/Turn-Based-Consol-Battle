@@ -22,22 +22,26 @@ namespace DefaultNamespace
             if (IsCharged)
             {
                 InstaKill();
-                return;
+                NextTurn();
             }
-            
-            base.AiChooseAction();
+            else
+            {
+                base.AiChooseAction();
+            }
         }
 
         public override void PlayerChooseAction()
         {
             if (IsCharged)
             {
-                InstaKill();
                 Initiative = false;
-                return;
-            } 
-            
-            base.PlayerChooseAction();
+                InstaKill();
+                NextTurn();
+            }
+            else
+            {
+                base.PlayerChooseAction();
+            }
         }
 
         protected override void ActionSlot1()
