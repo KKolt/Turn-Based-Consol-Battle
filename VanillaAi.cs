@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -56,6 +57,7 @@ namespace DefaultNamespace
         
         protected override void ActionSlot3()
         {
+            throw new NotImplementedException();
         }
         
         protected override void InitiativePrint()

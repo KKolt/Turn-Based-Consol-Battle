@@ -199,24 +199,33 @@ public class Fighter
 
     public virtual void PlayerChooseAction()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        try
         {
-            Initiative = false;
-            ActionSlot1();
-            NextTurn();
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                Initiative = false;
+                ActionSlot1();
+                NextTurn();
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                Initiative = false;
+                ActionSlot2();
+                NextTurn();
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                Initiative = false;
+                ActionSlot3();
+                NextTurn();
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        catch (NotImplementedException)
         {
-            Initiative = false;
-            ActionSlot2();
-            NextTurn();
+            Debug.Log("The action slot you selected is not in use.");
+            Initiative = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            Initiative = false;
-            ActionSlot3();
-            NextTurn();
-        }
+       
     }
 
     protected virtual void AiChooseAction()
